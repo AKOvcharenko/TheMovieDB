@@ -1,0 +1,169 @@
+.navigation{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #081c24;
+    width: 100%;
+    z-index: 5;
+
+    img{
+        width: 91px;
+        height: 81px;
+        transition: 0.5s ease;
+        will-change: height, width;
+    }
+
+    .primary{
+        font-size: 16px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        list-style-type: none;
+        line-height: 1.4em;
+        margin-bottom: 0;
+
+        li{
+            margin-right: 30px;
+            padding: 14px 0;
+            display: inline-block;
+            
+
+            a{
+              color: #fff;
+              font-weight: 500;
+              font-family: 'Source Sans Pro', 'Arial', sans-serif;
+              text-decoration: none;
+            }
+
+            .sub_menu{
+                display: none;
+                width: 100%;
+            }
+        }
+
+        li:hover{
+            .sub_menu{
+                height: auto;
+                position: absolute;
+                font-size: 0.9em;
+                transition: opacity 1s ease;
+                display: block;
+                padding: 0;
+                margin-top: -8px;
+
+                li{
+                    display: inline-block;
+
+                    a{
+                        color: #868e91;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-menu{
+        list-style-type: none;
+        margin: 34px 0;
+        float: right;
+        text-align: center;
+        transition: 0.5s ease;
+
+        
+        li{
+            display: inline-block;
+
+            a{
+                color: #00d373;
+                text-decoration: none;
+                font-size: 29px;
+                margin-right: 10px;
+                display: inline-block;
+                transition: 0.5s ease;
+                line-height: normal;
+            }
+
+            a:hover{
+                color: #fff;
+            }
+        }
+    }
+
+    .moto{
+        color: #00d373;
+        position: absolute;
+        left: 50%;
+        font-size: 22px;
+        margin-left: -212px;
+        text-transform: uppercase;
+        top: 5px;
+        font-family: Baloo Bhaina;
+        transition: 0.5s ease;
+    }
+}
+
+.navigation.smaller{
+    img{
+        width: 45px;
+        height: 40px;
+    }
+
+    li:hover{
+        .sub_menu{
+            margin-top: -15px;
+        }
+    }
+
+    .social-menu{
+        margin: 17px 0;
+    }
+
+    .moto{
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 565px) {
+    .navigation{
+        .primary{
+            li{
+                margin-right: 15px;
+            }
+        }
+
+        .social-menu{
+
+            margin: 40px 0;
+
+            li{
+                a{
+                    font-size: 23px;
+                }
+            }
+        }
+
+        .moto{
+            display: none;
+        }
+    }
+
+    .navigation.smaller{
+        .social-menu{
+            margin: 20px 0;
+        }
+
+
+    }
+}
+
+@media (max-width: 720px) {
+    .navigation{
+        .moto{
+            margin-left: -170px;
+            top: 10px;
+            font-size: 18px;
+        }
+    }
+}

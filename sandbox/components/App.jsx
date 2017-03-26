@@ -1,10 +1,17 @@
+import Navigation from './Navigation.jsx';
 import React, { Component } from 'react';
+import store from './../store/store.js';
+import { Provider } from 'react-redux';
+
 
 class App extends Component{
 
+
     render(){
         return (
-            <div>hello moto</div>
+            <Provider store={store}>
+                <Navigation/>
+            </Provider>
         )
     }
 }
