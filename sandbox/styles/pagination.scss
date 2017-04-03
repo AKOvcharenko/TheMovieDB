@@ -1,0 +1,17 @@
+.pagination-wrapper{
+
+    overflow: hidden;
+    text-align: center;
+
+    .pager{
+        display: inline-block;
+    }
+
+    .pager.previous-pager{
+        float: left;
+    }
+
+    .pager.next-pager{
+        float: right;
+    }
+}

@@ -1,0 +1,103 @@
+.person{
+    margin-bottom: 20px;
+
+    a{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        overflow: hidden;
+        border-radius: 3px;
+
+
+        .poster{
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .poster:before{
+            margin-top: 200%;
+            content: ' ';
+        }
+
+        .fade {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+
+        .fade.lazyloaded {
+            opacity: 1;
+        }
+
+        .meta{
+            background-color: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 27px;
+            z-index: 1;
+            visibility: visible;
+            transition: linear .1s;
+            display: block;
+            color: #000;
+
+            .name{
+                font-weight: 600;
+                font-family: Source Sans Pro;
+                display: block;
+                font-size: 1.3em;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0 10px;
+                overflow: hidden;
+                border-radius: 3px;
+            }
+
+            .sub{
+                opacity: 0;
+                transition: opacity .4s;
+                height: 0;
+                font-size: 1em;
+                font-weight: 400;
+                margin: 0 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+    }
+
+    a:hover{
+        .meta{
+            height: 50px;
+
+            .sub{
+                opacity: 1;
+                height: auto;
+
+            }
+        }
+
+    }
+
+    .image_content{
+        position: relative;
+        border: 1px solid black;
+        background: #e6e6e6;
+        border-radius: 3px;
+    }
+
+    .image_content:before{
+        content: "";
+        display: block;
+        padding-top: 150%;
+    }
+}
+
+

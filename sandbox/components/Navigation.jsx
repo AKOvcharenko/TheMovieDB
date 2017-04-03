@@ -20,7 +20,7 @@ class Navigation extends Component{
     handleScroll = (event) => {
         let { smaller, dispatch } = this.props;
         let nowSmaller = false;
-        if((window.pageYOffset || document.documentElement.scrollTop) > 125){nowSmaller = true;}
+        if((window.pageYOffset || document.documentElement.scrollTop) > 50){nowSmaller = true;}
         if(smaller !== nowSmaller){dispatch(setNavState(nowSmaller))}
     };
 
